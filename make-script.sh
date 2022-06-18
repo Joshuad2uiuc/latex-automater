@@ -2,6 +2,8 @@
 # usage: bash make-script.sh "Name of essay"
 # params : The actual plain English title of the essay (e.g. Leaves of Grass)
 
+author="FILL ME OUT"
+
 lowercase_title=$(echo "$@" | tr '[:upper:]' '[:lower:]')
 
 # convert title to hyphenate
@@ -15,6 +17,9 @@ mv ~/writing/$hyphenated_title/main.tex ~/writing/$hyphenated_title/$hyphenated_
 
 # Insert title as latex file name
 sed -i '' -e "s/\title{Title}/\title{$@}/g" ~/writing/$hyphenated_title/$hyphenated_title.tex 
+
+# Insert author name in file
+sed -i '' -e "s/\title{Title}/\title{$author}/g" ~/writing/$hyphenated_title/$hyphenated_title.tex 
 
 # Grab date
 date=$(date '+%B %Y')
