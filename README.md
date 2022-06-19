@@ -10,3 +10,9 @@ Usage is going to be something like this for me
 ```
 bash ~/latex-automater/make-script.sh The Elephant and the Whale
 ```
+
+Adding an alias so it will be actually something like
+
+```
+newlatex The Elephant and the 
+```
